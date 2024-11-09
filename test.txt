@@ -1,0 +1,32 @@
+test_list_int (test.Test01_Person.test_list_int)
+*** Test01 *** FUNCTION CALL: x = Person('Stephen','May') *** EXPECT: x.firstname+':'+x.lastname == 'Stephen:May' *** ... 
+ok
+test_list_int (test.Test02_Faculty.test_list_int)
+*** Test02 *** FUNCTION CALL: x = Faculty('Stephen','May','Computer Science') *** EXPECT: x.firstname+':'+x.lastname+':'+x.department == 'Stephen:May:Computer Science' *** ... 
+ok
+test_list_int (test.Test03_FacultyInheritsPerson.test_list_int)
+*** Test03 *** FUNCTION CALL: x = Faculty('Stephen','May','Computer Science') *** EXPECT: isinstance(x, Person) == True *** ... 
+ok
+test_list_int (test.Test04_FacultyInheritsStudent.test_list_int)
+*** Test04 *** FUNCTION CALL: x = Faculty('Stephen','May','Computer Science') *** EXPECT: isinstance(x, Student) == False *** ... 
+ok
+test_list_int (test.Test05_Student.test_list_int)
+*** Test05 *** FUNCTION CALL: x = Faculty('Stephen','May','Computer Science') THEN y = Student('Mickey','Mouse') THEN y.set_class('Freshman') THEN y.set_major('Electrical Engineering') THEN y.set_advisor(x) *** EXPECT: y.firstname+':'+y.lastname+':'+y.classyear+':'+y.major+':'+y.advisor.firstname+':'+y.advisor.lastname == 'Mickey:Mouse:Freshman:Electrical Engineering:Stephen:May' *** ... 
+ok
+test_list_int (test.Test06_StudentInheritsPerson.test_list_int)
+*** Test06 *** FUNCTION CALL: x = Faculty('Stephen','May','Computer Science') THEN y = Student('Mickey','Mouse') THEN y.set_class('Freshman') THEN y.set_major('Electrical Engineering') THEN y.set_advisor(x) *** EXPECT: isinstance(y, Person) == True *** ... 
+ok
+test_list_int (test.Test07_StudentInheritsFaculty.test_list_int)
+*** Test07 *** FUNCTION CALL: x = Faculty('Stephen','May','Computer Science') THEN y = Student('Mickey','Mouse') THEN y.set_class('Freshman') THEN y.set_major('Electrical Engineering') THEN y.set_advisor(x) *** EXPECT: isinstance(y, Faculty) == False *** ... 
+ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.001s
+
+OK
+
+
+
+
+
+
